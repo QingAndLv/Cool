@@ -43,8 +43,8 @@ class WindProvider(object):
             print(tradDay,'tradDay')
             tradDay = tradDay+self.dayDiff
     def getLastTradeDay(self):
-        tns = cx_Oracle.makedsn('IP', 1521, 'trading')
-        db = cx_Oracle.connect('c##trading', 'password', tns)
+        tns = cx_Oracle.makedsn('IP', 1, 't')
+        db = cx_Oracle.connect('c', 'p', tns)
         cr = db.cursor()
         sql = "SELECT MAX(TRAD_DT) FROM QUOTE_1MIN3 ORDER BY TRAD_DT"
         cr.execute(sql)
