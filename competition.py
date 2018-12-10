@@ -67,25 +67,6 @@ class regression():
         c=ymean*ones((len(datamat[0]),1))-mat(array(m)*array(xmean))#n行1列
         predic=datamat2*m+c
         return predic
-# class cart():
-#     def createtree(datamat,labelmat):
-#         bestfeat,val=bestsplit(datamat,labelmat)
-#         if bestfeat==None:return val
-#         rettree={}
-#         rettree['spf']=bestfeat
-#         rettree['spval']=val
-#         ldatamat,llabelmat,rdatamat,rlabelmat=splitdata(datamat,labelmat,bestfeat,val)
-#         rettree['left']=cart.createtree(ldatamat,llabelmat)
-#         rettree['right']=cart.createtree(rdatamat,rlabelmat)
-#         return rettree
-#     def bestsplit(datamat,labelmat):
-#         stop=5
-#         tols=0.1
-#         m,n=shape(datamat)
-#         treeerr=var(labelmat)
-#         for featindex in range(n):
-#             for splitval in set
-# class pca():
 def error(predict,labelmat):
     num=0
     for i in range(len(labelmat)):
